@@ -60,6 +60,28 @@
   const sections = $$('main section[id]');
   const navMap = new Map($$('.nav-links a').map(a => [a.getAttribute('href').slice(1), a]));
 
+  /* ── indicador deslizante bajo el enlace activo ── */
+  const ind = $('.nav-ind');
+  let indTarget = null;
+
+  function moveInd(el, instant) {
+    if (!ind || !el || links.classList.contains('is-open')) return;
+    const p = links.getBoundingClientRect(), r = el.getBoundingClientRect();
+    if (!r.width) return;
+    if (instant) ind.style.transition = 'none';
+    ind.style.width = r.width + 'px';
+    ind.style.transform = `translateX(${r.left - p.left}px)`;
+    ind.classList.add('is-on');
+    if (instant) { void ind.offsetWidth; ind.style.transition = ''; }
+  }
+
+  $$('.nav-links a').forEach(a => {
+    a.addEventListener('pointerenter', () => moveInd(a));
+    a.addEventListener('focus', () => moveInd(a));
+  });
+  links.addEventListener('pointerleave', () => moveInd(indTarget));
+  window.addEventListener('resize', () => moveInd(indTarget, true));
+
   /* ───────────────────────── PROGRESO ───────────────────────── */
   const bar = $('.scroll-progress i');
 
@@ -75,6 +97,9 @@
       if (s.offsetTop <= y) current = s.id;
     }
     navMap.forEach((a, id) => a.classList.toggle('is-active', id === current));
+    const act = current && navMap.get(current);
+    if (act !== indTarget) { indTarget = act || null; moveInd(indTarget); }
+    if (!indTarget && ind) ind.classList.remove('is-on');
 
     // relleno de la línea de tiempo
     if (tlRail && tlWrap) {
@@ -245,10 +270,9 @@
       { ic: '◆', t: 'Stack técnico',         s: 'Tecnologías puestas en producción',        go: '#stack' },
       { ic: '◆', t: 'Cargos',                s: 'A qué cargos corresponde el perfil',       go: '#valor' },
       { ic: '◆', t: 'Contacto',              s: 'Correo, WhatsApp, LinkedIn y GitHub',      go: '#contacto' },
-      { ic: '↓', t: 'Descargar hoja de vida (PDF)', s: 'Versión maquetada, 4 páginas',      href: 'assets/docs/HDV_Edwin_Calderon_Senior.pdf' },
-      { ic: '↓', t: 'Descargar hoja de vida (Word)', s: 'Versión editable',                 href: 'assets/docs/HDV_Edwin_Calderon_Senior.docx' },
-      { ic: '↓', t: 'Portafolio de diseño',  s: 'Marca, contenido digital y XR',            href: 'assets/docs/Portafolio_Diseno_y_Contenido.pdf' },
-      { ic: '↓', t: 'Certificado laboral',   s: 'Universidad del Magdalena',                href: 'assets/docs/Certificado_Universidad_del_Magdalena.pdf' },
+      { ic: '↗', t: 'Abrir hoja de vida (PDF)', s: 'Versión maquetada, 4 páginas',          href: 'assets/docs/HDV_Edwin_Calderon_Senior.pdf' },
+      { ic: '↗', t: 'Abrir portafolio de diseño', s: 'Marca, contenido digital y XR',        href: 'assets/docs/Portafolio_Diseno_y_Contenido.pdf' },
+      { ic: '↗', t: 'Abrir certificado laboral', s: 'Universidad del Magdalena',             href: 'assets/docs/Certificado_Universidad_del_Magdalena.pdf' },
       { ic: '✉', t: 'Escribir un correo',    s: 'edwinaguilera777@gmail.com',               href: 'mailto:edwinaguilera777@gmail.com' },
       { ic: '✆', t: 'Abrir WhatsApp',        s: '+57 301 409 9377',                         href: 'https://wa.me/573014099377' },
       { ic: '✦', t: 'Preguntar a The Architect', s: 'Asistente de perfil',                  act: () => window.Architect && window.Architect.open() },
@@ -292,11 +316,9 @@
       close();
       if (i.act) { i.act(); return; }
       if (i.href) {
-        const a = document.createElement('a');
-        a.href = i.href;
-        if (/^https?:|^mailto:/.test(i.href)) { a.target = '_blank'; a.rel = 'noopener'; }
-        else a.download = '';
-        document.body.appendChild(a); a.click(); a.remove();
+        // todo se abre en una pestaña nueva: el visitante no pierde el portafolio
+        if (/^mailto:/.test(i.href)) { location.href = i.href; return; }
+        window.open(i.href, '_blank', 'noopener');
         return;
       }
       if (i.go) {

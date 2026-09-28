@@ -51,25 +51,18 @@ window.ARCHITECT_KB = {
           <a href="https://www.levels.fyi/t/solution-architect/levels/senior/locations/medellin-col" target="_blank" rel="noopener">Levels.fyi</a>.</li>
         <li><b>Líder Técnico / Engineering Manager</b> —
           <a href="https://www.levels.fyi/t/software-engineering-manager/locations/colombia" target="_blank" rel="noopener">Levels.fyi, Colombia</a>.</li>
-        <li><b>Jefe o Coordinador de Sistemas / IT Manager</b> —
-          <a href="https://co.computrabajo.com/salarios/jefe-de-sistemas" target="_blank" rel="noopener">Computrabajo</a>.</li>
-        <li><b>Especialista en Seguridad de la Información</b> —
-          <a href="https://co.computrabajo.com/salarios/especialista-en-seguridad-de-la-informacion" target="_blank" rel="noopener">Computrabajo</a>.</li>
         <li><b>Desarrollador Full-Stack Senior</b> —
-          <a href="https://co.computrabajo.com/salarios/desarrollador-senior" target="_blank" rel="noopener">Computrabajo</a> ·
           <a href="https://www.coderhouse.com/co/sueldos/sueldo-desarrollador-full-stack-colombia-2025" target="_blank" rel="noopener">Coderhouse</a>.</li>
-        <li><b>Líder de Transformación Digital</b> —
-          <a href="https://ingenieria.javeriana.edu.co/w/blog/cuanto-gana-un-ingeniero-sistemas" target="_blank" rel="noopener">P. U. Javeriana</a>.</li>
       </ul>
 
-      <p>El punto importante no es cuál de esos títulos le pongas, sino que <b>ejerce varios a la vez</b>: hoy es el
-      área de TI completa de una refinería —infraestructura, redes, seguridad, desarrollo e intranet— en una empresa
-      que no tiene a nadie más de tecnología en toda su planta.</p>
+      <p>El punto importante no es cuál de esos títulos le pongas, sino que <b>ejerce varios a la vez</b>: hoy
+      acompaña simultáneamente los frentes de infraestructura, redes, seguridad, desarrollo e intranet de una
+      refinería de petróleo.</p>
 
       <p>Así que la comparación correcta es contra los intervalos de esos cargos <b>senior y de liderazgo técnico</b>,
       no contra una banda de entrada. Lo demás es una conversación que conviene tener con él directamente:
       <b>edwinaguilera777@gmail.com</b>.</p>`,
-    src: 'Levels.fyi (Colombia, Cartagena y Medellín) · Computrabajo Colombia · Coderhouse — Sueldos Colombia 2026 · P. U. Javeriana, Facultad de Ingeniería',
+    src: 'Levels.fyi (Colombia, Cartagena y Medellín) · Computrabajo Colombia · Coderhouse — Sueldos Colombia 2026',
     related: ['¿Por qué es un perfil senior?', '¿Ha liderado equipos?', '¿Qué hace hoy en Petroil?']
   },
 
@@ -105,7 +98,7 @@ window.ARCHITECT_KB = {
            'como lo clasifico','equivalente','tech lead','arquitecto','jefe de ti','it manager','gerente'],
     q: ['a que cargos corresponde este perfil','que cargo podria ocupar','para que puesto sirve',
         'como se llama lo que hace','en que rol lo contrato','que posiciones puede ocupar','como clasifico este perfil'],
-    a: `<p>El mercado colombiano nombra de <b>ocho maneras distintas</b> las funciones que este perfil ya ejerce.
+    a: `<p>El mercado colombiano nombra de <b>cinco maneras distintas</b> las funciones que este perfil ya ejerce.
       Cada enlace lleva a la fuente pública donde se consulta el intervalo de referencia de ese cargo:</p>
       <ul>
         <li><b>Ingeniero de Software Senior</b> · <i>Senior Software Engineer</i> —
@@ -117,22 +110,14 @@ window.ARCHITECT_KB = {
           <a href="https://www.levels.fyi/t/solution-architect/levels/senior/locations/medellin-col" target="_blank" rel="noopener">Levels.fyi</a>.</li>
         <li><b>Líder Técnico</b> · <i>Tech Lead / Engineering Manager</i> —
           <a href="https://www.levels.fyi/t/software-engineering-manager/locations/colombia" target="_blank" rel="noopener">Levels.fyi, Colombia</a>.</li>
-        <li><b>Jefe o Coordinador de Sistemas</b> · <i>IT Manager</i> —
-          <a href="https://co.computrabajo.com/salarios/jefe-de-sistemas" target="_blank" rel="noopener">Computrabajo</a>.</li>
-        <li><b>Especialista en Seguridad de la Información</b> —
-          <a href="https://co.computrabajo.com/salarios/especialista-en-seguridad-de-la-informacion" target="_blank" rel="noopener">Computrabajo</a>.</li>
         <li><b>Desarrollador Full-Stack Senior</b> —
-          <a href="https://co.computrabajo.com/salarios/desarrollador-senior" target="_blank" rel="noopener">Computrabajo</a> ·
           <a href="https://www.coderhouse.com/co/sueldos/sueldo-desarrollador-full-stack-colombia-2025" target="_blank" rel="noopener">Coderhouse</a>.</li>
-        <li><b>Líder de Transformación Digital</b> —
-          <a href="https://ingenieria.javeriana.edu.co/w/blog/cuanto-gana-un-ingeniero-sistemas" target="_blank" rel="noopener">P. U. Javeriana</a>.</li>
       </ul>
-      <p>La particularidad no es que califique para varios, sino que <b>hoy los ejerce simultáneamente</b>: en Petroil
-      es el área de TI completa —infraestructura, redes, seguridad, desarrollo, intranet y dirección creativa— siendo
-      el único perfil de tecnología de toda la planta.</p>
+      <p>La particularidad no es que califique para varios, sino que <b>hoy los ejerce simultáneamente</b>: en
+      Petroil acompaña a la vez infraestructura, redes, seguridad, desarrollo, intranet y dirección creativa.</p>
       <p>Si tuvieras que abrir una sola vacante para él, la más fiel sería <b>Ingeniero de Sistemas Senior</b> con
-      alcance de <b>Jefatura o Coordinación de TI</b>.</p>`,
-    src: 'Levels.fyi · Computrabajo Colombia · Coderhouse · P. U. Javeriana, Facultad de Ingeniería'
+      alcance de <b>liderazgo técnico</b>.</p>`,
+    src: 'Levels.fyi · Computrabajo Colombia · Coderhouse'
   },
 
   /* ═══ IDENTIDAD ═══ */
@@ -146,8 +131,8 @@ window.ARCHITECT_KB = {
       Su rasgo distintivo es que cubre la cadena completa: diagnostica el problema con criterio de ingeniería
       industrial —procesos, cuellos de botella, costos— y construye la solución con criterio de ingeniería de
       sistemas —arquitectura, código, base de datos, infraestructura, seguridad y operación—.</p>
-      <p>Hoy es el <b>único perfil de tecnología</b> de Petroil S.A., una refinería de petróleo que no cuenta con área
-      de TI ni con ingenieros de sistemas en toda su planta, donde asumió de facto la función completa del área.</p>`
+      <p>Actualmente acompaña los frentes de tecnología de <b>Petroil S.A.</b>, una refinería de petróleo en Santa
+      Marta: ciberseguridad, infraestructura, desarrollo web, intranet y dirección creativa.</p>`
   },
   {
     id: 'senior-porque', cat: 'Perfil',
@@ -197,8 +182,8 @@ window.ARCHITECT_KB = {
       <ul>
         <li><b>Auditoría de ciberseguridad</b> de la infraestructura corporativa, con reporte formal de hallazgos,
           plan de remediación y hardening de la plataforma.</li>
-        <li><b>Redes:</b> diagnosticó y resolvió bloqueos que impedían el acceso a servicios críticos desde la red
-          corporativa, restableciendo la operación de las áreas afectadas.</li>
+        <li><b>Redes:</b> diagnosticó los bloqueos que impedían el acceso a servicios críticos desde la red
+          corporativa y propuso las medidas correctivas para restablecer la operación de las áreas afectadas.</li>
         <li><b>Nuevo sitio web corporativo:</b> diseño, maquetación y desarrollo completo, reemplazando un WordPress
           obsoleto y tercerizado. Presentó una maqueta como referencia para el proveedor externo; gustó tanto que se
           aprobó tal cual y la construcción quedó a su cargo.</li>
@@ -354,7 +339,7 @@ window.ARCHITECT_KB = {
   },
   {
     id: 'primer-empleo', cat: 'Experiencia',
-    tags: ['primer empleo','17 años','access','excel','generaciones con bienestar','cuentame','200 promotores','magdalena','guajira','cesar','2015','inicio'],
+    tags: ['primer empleo','17 años','access','excel','generaciones con bienestar','cuentame','180 promotores','magdalena','guajira','cesar','2015','inicio'],
     q: ['cual fue su primer trabajo','desde cuando trabaja','como empezo','que hizo a los 17 años'],
     a: `<p>Su primer empleo profesional fue en la <b>Universidad del Magdalena</b> a los <b>17 años</b>, en julio de 2015.</p>
       <ul>
@@ -363,7 +348,7 @@ window.ARCHITECT_KB = {
           Su primer trabajo ya fue construir una herramienta, no operar una.</li>
         <li>Por rendimiento lo movieron a un proyecto de mayor responsabilidad: el programa <b>«Generaciones con
           Bienestar»</b> del ICBF. Empezó administrando la regional Magdalena y terminó llevando también
-          <b>La Guajira y Cesar</b>, con <b>cerca de 200 promotores</b> a cargo entre las tres.</li>
+          <b>La Guajira y Cesar</b>, con <b>cerca de 180 promotores</b> a cargo entre las tres.</li>
         <li>El programa se ubicó en el <b>top nacional de operadores</b> en el cargue del sistema de información «Cuéntame».</li>
       </ul>
       <p>El patrón se repite en toda su carrera: entra en un rol, rinde por encima de lo esperado y le amplían el alcance.</p>`
@@ -473,8 +458,8 @@ window.ARCHITECT_KB = {
         <li><b>Responsable de Seguridad e Integridad de la Información</b> (Universidad del Magdalena, 2022): respondió
           formalmente por la seguridad, integridad y trazabilidad de la información de un programa del ICBF, en medio
           físico y electrónico.</li>
-        <li><b>Redes:</b> diagnosticó y resolvió bloqueos que impedían el acceso a servicios críticos desde la red
-          corporativa, restableciendo la operación.</li>
+        <li><b>Redes:</b> diagnosticó los bloqueos de acceso a servicios críticos desde la red corporativa y
+          propuso las medidas correctivas correspondientes.</li>
         <li><b>Infraestructura:</b> años administrando servidores Linux en producción, con responsabilidad sobre
           disponibilidad y continuidad.</li>
       </ul>
@@ -489,7 +474,7 @@ window.ARCHITECT_KB = {
       <ul>
         <li><b>Modelado y administración:</b> MySQL y SQLite; diseño relacional, <b>migraciones de esquema versionadas</b>
           para evolucionar bases en producción sin pérdida de histórico, y administración de bases en servidores Linux.</li>
-        <li><b>Escala real:</b> administró la información de <b>cerca de 200 promotores en tres departamentos</b>
+        <li><b>Escala real:</b> administró la información de <b>cerca de 180 promotores en tres departamentos</b>
           (Magdalena, La Guajira y Cesar) y respondió por la calidad del dato de programas sociales nacionales, con
           reconocimiento como referente nacional de buenas prácticas.</li>
         <li><b>BI y analítica:</b> Power BI, Excel avanzado, SPSS y R Studio para análisis y visualización.</li>
@@ -559,7 +544,7 @@ window.ARCHITECT_KB = {
           (2021–2023), definiendo arquitectura, estándares de código, alcance y entregables.</li>
         <li><b>Equipo operativo grande:</b> coordinó <b>equipos de hasta 50 personas</b> como Director de Sistematización
           en Fundación Talentos, rediseñando flujos de información y procesos.</li>
-        <li><b>Estructura distribuida:</b> administró la información de <b>cerca de 200 promotores</b> repartidos en tres
+        <li><b>Estructura distribuida:</b> administró la información de <b>cerca de 180 promotores</b> repartidos en tres
           departamentos —Magdalena, La Guajira y Cesar—.</li>
       </ul>
       <p>El resultado documentado de ese liderazgo: el equipo recibió <b>premiación nacional desde Bogotá</b> y fue
