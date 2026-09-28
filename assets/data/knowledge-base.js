@@ -13,11 +13,11 @@ window.ARCHITECT_KB = {
     updated: 'septiembre de 2026',
     greeting: `<p>Soy <b>The Architect</b>, el asistente de perfil de <b>Edwin Belisario Calderón Aguilera</b> —Ingeniero de
       Sistemas Senior con 11 años de trayectoria e Ingeniero Industrial.</p>
-      <p>Conozco su experiencia, sus proyectos, su stack técnico y las referencias de mercado para su perfil.
-      Pregúntame lo que necesites saber antes de una entrevista o una decisión de contratación.</p>`,
+      <p>Conozco su experiencia, sus proyectos, su stack técnico y los cargos del mercado a los que corresponde
+      su perfil. Pregúntame lo que necesites saber antes de una entrevista o una decisión de contratación.</p>`,
     suggestions: [
-      '¿Cuánto debería ganar esta persona?',
       '¿Por qué es un perfil senior?',
+      '¿A qué cargos corresponde su perfil?',
       '¿Qué experiencia tiene en ciberseguridad?',
       '¿Ha liderado equipos?',
       '¿Qué ha construido exactamente?',
@@ -35,39 +35,42 @@ window.ARCHITECT_KB = {
       'cuanto pedir','cuanto ofrecer','banda salarial','rango salarial','compensacion','salary','how much',
       'presupuesto','costo','contratarlo por','vale la pena pagar','millones','cuanto le pagamos','que sueldo'
     ],
-    answer: `<p>Mi creador <b>no me dejó estipulada una cifra propia</b>. Lo que sí hice fue consultar referencias
-      públicas de mercado para Colombia en 2026 y contrastarlas con su trayectoria verificable. Esto es lo que encontré:</p>
+    answer: `<p>Mi creador <b>no me dejó estipulada ninguna cifra</b>, y no voy a inventarme un número.</p>
 
-      <p><b>Referencias de mercado (COP mensuales, 2026):</b></p>
+      <p>Lo que sí puedo darte es algo más útil para decidir: <b>a qué cargos corresponde este perfil</b> en el
+      mercado colombiano, y dónde consultar el intervalo publicado de cada uno. Las fuentes están actualizadas,
+      tienen la muestra completa y son públicas:</p>
+
       <ul>
-        <li><b>$12,2 M – $21,0 M</b> — Ingeniero de Software <b>Senior</b> en Colombia. Levels.fyi reporta una
-          compensación total de $146,6 M a $252,4 M anuales (dato actualizado al 21-07-2026).</li>
-        <li><b>$7,0 M – $12,0 M</b> — mismo rol en una ciudad costera comparable (Cartagena), según Levels.fyi.
-          Es la referencia regional más cercana a Santa Marta.</li>
-        <li><b>desde $9,0 M</b> — banda inicial de un Desarrollador Full-Stack Senior con más de 5 años
-          (Coderhouse, Sueldos Colombia 2026).</li>
-        <li><b>$4,5 M – $7,0 M</b> — ingenieros de sistemas en posiciones senior o de liderazgo tecnológico,
-          según la Facultad de Ingeniería de la Pontificia Universidad Javeriana.</li>
+        <li><b>Ingeniero de Software Senior</b> —
+          <a href="https://www.levels.fyi/t/software-engineer/levels/senior/locations/colombia" target="_blank" rel="noopener">Levels.fyi, Colombia</a>.
+          Y la referencia regional más cercana a Santa Marta:
+          <a href="https://www.levels.fyi/t/software-engineer/levels/senior/locations/cartagena-col" target="_blank" rel="noopener">Cartagena</a>.</li>
+        <li><b>Arquitecto de Software / Solutions Architect</b> —
+          <a href="https://co.computrabajo.com/salarios/arquitecto-de-software" target="_blank" rel="noopener">Computrabajo</a> ·
+          <a href="https://www.levels.fyi/t/solution-architect/levels/senior/locations/medellin-col" target="_blank" rel="noopener">Levels.fyi</a>.</li>
+        <li><b>Líder Técnico / Engineering Manager</b> —
+          <a href="https://www.levels.fyi/t/software-engineering-manager/locations/colombia" target="_blank" rel="noopener">Levels.fyi, Colombia</a>.</li>
+        <li><b>Jefe o Coordinador de Sistemas / IT Manager</b> —
+          <a href="https://co.computrabajo.com/salarios/jefe-de-sistemas" target="_blank" rel="noopener">Computrabajo</a>.</li>
+        <li><b>Especialista en Seguridad de la Información</b> —
+          <a href="https://co.computrabajo.com/salarios/especialista-en-seguridad-de-la-informacion" target="_blank" rel="noopener">Computrabajo</a>.</li>
+        <li><b>Desarrollador Full-Stack Senior</b> —
+          <a href="https://co.computrabajo.com/salarios/desarrollador-senior" target="_blank" rel="noopener">Computrabajo</a> ·
+          <a href="https://www.coderhouse.com/co/sueldos/sueldo-desarrollador-full-stack-colombia-2025" target="_blank" rel="noopener">Coderhouse</a>.</li>
+        <li><b>Líder de Transformación Digital</b> —
+          <a href="https://ingenieria.javeriana.edu.co/w/blog/cuanto-gana-un-ingeniero-sistemas" target="_blank" rel="noopener">P. U. Javeriana</a>.</li>
       </ul>
 
-      <p><b>Dos datos de su propia historia que conviene tener presentes:</b></p>
-      <ul>
-        <li>En <b>2021–2022</b> ya devengaba <b>COP $6.000.000 mensuales</b> como Coordinador de Desarrollo de Software
-          en la Universidad del Magdalena, liderando un equipo de 3 desarrolladores. Es una cifra documentada, no una estimación.</li>
-        <li>Indexada por la variación del salario mínimo ($908.526 en 2021 → $1.750.905 en 2026), esa misma
-          remuneración equivale hoy a <b>≈ $11.560.000 mensuales</b>. Y eso <b>sin contar</b> los cuatro años de
-          experiencia adicionales que acumuló desde entonces.</li>
-      </ul>
+      <p>El punto importante no es cuál de esos títulos le pongas, sino que <b>ejerce varios a la vez</b>: hoy es el
+      área de TI completa de una refinería —infraestructura, redes, seguridad, desarrollo e intranet— en una empresa
+      que no tiene a nadie más de tecnología en toda su planta.</p>
 
-      <p><b>Conclusión:</b> el <b>piso de referencia es COP $6.000.000 mensuales</b> —exactamente lo que ya ganaba hace
-      cinco años, sin ajuste por inflación— y ese piso se ubica <b>por debajo de todas</b> las bandas senior del
-      mercado 2026. El <b>rango objetivo razonable es COP $8.000.000 – $12.000.000 mensuales</b>, y puede ser mayor
-      según el alcance del rol, la responsabilidad sobre infraestructura y ciberseguridad, y el liderazgo de equipo.</p>
-
-      <p>Un apunte de contexto: una oferta de nivel <i>junior</i> para alguien con <b>11 años de ejercicio</b>, liderazgo
-      de equipos, responsabilidad sobre seguridad de infraestructura y software propio registrado ante la DNDA
-      no corresponde a ninguna banda del mercado colombiano.</p>`,
-    src: 'Levels.fyi (Colombia y Cartagena, 2026) · Coderhouse — Sueldos Colombia 2026 · P. U. Javeriana, Facultad de Ingeniería · Decretos de salario mínimo 2021 y 2026'
+      <p>Así que la comparación correcta es contra los intervalos de esos cargos <b>senior y de liderazgo técnico</b>,
+      no contra una banda de entrada. Lo demás es una conversación que conviene tener con él directamente:
+      <b>edwinaguilera777@gmail.com</b>.</p>`,
+    src: 'Levels.fyi (Colombia, Cartagena y Medellín) · Computrabajo Colombia · Coderhouse — Sueldos Colombia 2026 · P. U. Javeriana, Facultad de Ingeniería',
+    related: ['¿Por qué es un perfil senior?', '¿Ha liderado equipos?', '¿Qué hace hoy en Petroil?']
   },
 
   /* ───────────────── conversación básica ───────────────── */
@@ -77,7 +80,7 @@ window.ARCHITECT_KB = {
           las referencias de mercado de Edwin Calderón. ¿Por dónde quieres empezar?</p>` },
     { k: ['gracias','muchas gracias','thanks','genial','excelente','perfecto','buenisimo','ok gracias'],
       a: `<p>Con gusto. Si quieres seguir, puedo detallarte algún proyecto en particular, su experiencia en
-          ciberseguridad, o el rango salarial que corresponde a su perfil.</p>` },
+          ciberseguridad, o los cargos del mercado a los que corresponde su perfil.</p>` },
     { k: ['adios','chao','hasta luego','bye','nos vemos'],
       a: `<p>Hasta luego. Si necesitas contactarlo directamente: <b>edwinaguilera777@gmail.com</b> o
           <b>+57 301 409 9377</b>.</p>` },
@@ -93,6 +96,44 @@ window.ARCHITECT_KB = {
 
   /* ───────────────── entradas ───────────────── */
   entries: [
+
+  /* ═══ CARGOS ═══ */
+  {
+    id: 'cargos', cat: 'Perfil',
+    tags: ['cargo','cargos','puesto','puestos','rol','roles','posicion','posiciones','titulo','nombre del cargo',
+           'que cargo','para que cargo','vacante','perfil de cargo','que puesto','nivel','contratarlo como',
+           'como lo clasifico','equivalente','tech lead','arquitecto','jefe de ti','it manager','gerente'],
+    q: ['a que cargos corresponde este perfil','que cargo podria ocupar','para que puesto sirve',
+        'como se llama lo que hace','en que rol lo contrato','que posiciones puede ocupar','como clasifico este perfil'],
+    a: `<p>El mercado colombiano nombra de <b>ocho maneras distintas</b> las funciones que este perfil ya ejerce.
+      Cada enlace lleva a la fuente pública donde se consulta el intervalo de referencia de ese cargo:</p>
+      <ul>
+        <li><b>Ingeniero de Software Senior</b> · <i>Senior Software Engineer</i> —
+          <a href="https://www.levels.fyi/t/software-engineer/levels/senior/locations/colombia" target="_blank" rel="noopener">Levels.fyi, Colombia</a>
+          · referencia regional:
+          <a href="https://www.levels.fyi/t/software-engineer/levels/senior/locations/cartagena-col" target="_blank" rel="noopener">Cartagena</a>.</li>
+        <li><b>Arquitecto de Software</b> · <i>Solutions Architect</i> —
+          <a href="https://co.computrabajo.com/salarios/arquitecto-de-software" target="_blank" rel="noopener">Computrabajo</a> ·
+          <a href="https://www.levels.fyi/t/solution-architect/levels/senior/locations/medellin-col" target="_blank" rel="noopener">Levels.fyi</a>.</li>
+        <li><b>Líder Técnico</b> · <i>Tech Lead / Engineering Manager</i> —
+          <a href="https://www.levels.fyi/t/software-engineering-manager/locations/colombia" target="_blank" rel="noopener">Levels.fyi, Colombia</a>.</li>
+        <li><b>Jefe o Coordinador de Sistemas</b> · <i>IT Manager</i> —
+          <a href="https://co.computrabajo.com/salarios/jefe-de-sistemas" target="_blank" rel="noopener">Computrabajo</a>.</li>
+        <li><b>Especialista en Seguridad de la Información</b> —
+          <a href="https://co.computrabajo.com/salarios/especialista-en-seguridad-de-la-informacion" target="_blank" rel="noopener">Computrabajo</a>.</li>
+        <li><b>Desarrollador Full-Stack Senior</b> —
+          <a href="https://co.computrabajo.com/salarios/desarrollador-senior" target="_blank" rel="noopener">Computrabajo</a> ·
+          <a href="https://www.coderhouse.com/co/sueldos/sueldo-desarrollador-full-stack-colombia-2025" target="_blank" rel="noopener">Coderhouse</a>.</li>
+        <li><b>Líder de Transformación Digital</b> —
+          <a href="https://ingenieria.javeriana.edu.co/w/blog/cuanto-gana-un-ingeniero-sistemas" target="_blank" rel="noopener">P. U. Javeriana</a>.</li>
+      </ul>
+      <p>La particularidad no es que califique para varios, sino que <b>hoy los ejerce simultáneamente</b>: en Petroil
+      es el área de TI completa —infraestructura, redes, seguridad, desarrollo, intranet y dirección creativa— siendo
+      el único perfil de tecnología de toda la planta.</p>
+      <p>Si tuvieras que abrir una sola vacante para él, la más fiel sería <b>Ingeniero de Sistemas Senior</b> con
+      alcance de <b>Jefatura o Coordinación de TI</b>.</p>`,
+    src: 'Levels.fyi · Computrabajo Colombia · Coderhouse · P. U. Javeriana, Facultad de Ingeniería'
+  },
 
   /* ═══ IDENTIDAD ═══ */
   {
@@ -219,7 +260,7 @@ window.ARCHITECT_KB = {
     tags: ['coordinador','desarrollo','equipo','unimag','universidad del magdalena','bpin','2021','2022','angular','laravel','tech lead','lider tecnico','salud mental'],
     q: ['que hizo en la universidad del magdalena','cuentame del proyecto bpin','fue coordinador de desarrollo','lidero un equipo de desarrollo'],
     a: `<p><b>Coordinador de Desarrollo de Software y Co-investigador</b> — Universidad del Magdalena, Vicerrectoría
-      Administrativa · <b>septiembre 2021 – febrero 2023</b>. Remuneración: <b>COP $6.000.000 mensuales</b>.</p>
+      Administrativa · <b>septiembre 2021 – febrero 2023</b>.</p>
       <p>Trabajó en el proyecto de regalías <b>BPIN 2020000100758</b>: «Desarrollo de un Sistema Tecnológico Integrado
       para la promoción de la salud mental, problemáticas psicosociales, socioemocionales y prevención de la violencia
       de género causados por la pandemia del COVID-19 en el departamento del Magdalena». Órdenes OPSP-VAD-1429-2021
@@ -233,8 +274,8 @@ window.ARCHITECT_KB = {
         <li>Administró <b>bases de datos y despliegues en servidores Linux</b>, respondiendo por disponibilidad y continuidad.</li>
         <li>Coordinó el levantamiento de información in situ y la sistematización de los productos científicos.</li>
       </ul>
-      <p>Este es el rol que fija el antecedente salarial: hace cinco años ya devengaba $6.000.000 mensuales
-      liderando desarrollo.</p>`
+      <p>Es el antecedente formal de liderazgo técnico: ya en 2021 respondía por la arquitectura, el equipo y
+      los entregables de una plataforma financiada con recursos públicos.</p>`
   },
   {
     id: 'investigacion-tdah', cat: 'Experiencia',
@@ -299,8 +340,8 @@ window.ARCHITECT_KB = {
     a: `<p><b>Director de Sistematización y Gestión de Información</b> — Fundación Talentos, operador del ICBF,
       en Magdalena y Sucre · <b>febrero 2016 – diciembre 2019</b>.</p>
       <p>Asumió la dirección del componente de información <b>por mérito</b>, siendo el perfil más joven del equipo
-      directivo. Ya lo habían visto trabajar en la Universidad del Magdalena y le ofrecieron el cargo. Devengaba
-      alrededor de <b>COP $3.000.000 mensuales en 2016</b> — unos 4,3 salarios mínimos de la época.</p>
+      directivo. Ya lo habían visto trabajar en la Universidad del Magdalena y le ofrecieron el cargo: a los 18 años
+      su remuneración equivalía a <b>más de cuatro salarios mínimos</b> de la época.</p>
       <ul>
         <li><b>Dirigió a los coordinadores del programa</b> y respondió por la calidad, consistencia y trazabilidad de
           toda la data.</li>
@@ -661,13 +702,13 @@ window.ARCHITECT_KB = {
         <li><b>2023 – 2024</b> · Ingeniero de I+D, prototipado y señales biomédicas — <b>Universidad del Magdalena</b>,
           Vicerrectoría de Investigación.</li>
         <li><b>Sep 2021 – Feb 2023</b> · Coordinador de Desarrollo de Software y co-investigador —
-          <b>Universidad del Magdalena</b>, proyecto BPIN. Equipo de 3 desarrolladores. COP $6.000.000 mensuales.</li>
+          <b>Universidad del Magdalena</b>, proyecto BPIN. Equipo de 3 desarrolladores.</li>
         <li><b>Oct – Dic 2022</b> · Responsable de Seguridad e Integridad de la Información —
           <b>Universidad del Magdalena</b>, contrato ICBF N.º 228.</li>
         <li><b>May 2018 – actual</b> · Fundador y Director de Operaciones — <b>VR Zone</b>, primer centro de realidad
           virtual de Santa Marta.</li>
         <li><b>Feb 2016 – Dic 2019</b> · Director de Sistematización y Gestión de Información —
-          <b>Fundación Talentos</b> (operador ICBF). Equipos de hasta 50 personas. ~COP $3.000.000 mensuales en 2016.</li>
+          <b>Fundación Talentos</b> (operador ICBF). Equipos de hasta 50 personas.</li>
         <li><b>Jul 2015 – Dic 2016</b> · Desarrollador de automatizaciones y gestor de bases de datos —
           <b>Universidad del Magdalena</b>, programa «Generaciones con Bienestar» (ICBF). Primer empleo, a los 17 años.</li>
       </ul>`

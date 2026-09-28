@@ -530,16 +530,31 @@ ul{ list-style:none; }
 .mkt .val{ font-family:var(--f-disp); font-size:16px; font-weight:700; color:var(--tx);
   white-space:nowrap; text-align:right; }
 
+/* nombre del cargo + su equivalente en inglés */
+.mkt tbody th{ max-width:270px; }
+.role-en{ display:block; margin-top:3px; font-family:var(--f-mono); font-size:11px;
+  font-weight:400; color:var(--tx-3); letter-spacing:.01em; }
+
+/* enlace a la fuente, en forma de chip */
+.mkt td:last-child{ text-align:left; white-space:normal; }
+.src-link{ display:inline-flex; align-items:center; gap:6px; margin:0 6px 6px 0;
+  padding:6px 12px; border-radius:99px; font-size:12.5px; font-weight:500;
+  border:1px solid var(--border); background:var(--surface); color:var(--tx-2);
+  transition:color .22s var(--ease), border-color .22s, background .22s, transform .22s var(--ease); }
+.src-link span{ font-size:10px; color:var(--a1); }
+.src-link:hover{ color:var(--tx); border-color:var(--a1); background:var(--a1-soft); transform:translateY(-1px); }
+
 .anchor{ margin-top:22px; display:grid; grid-template-columns:auto 1fr; gap:clamp(24px,4vw,48px);
   align-items:center; padding:clamp(28px,4vw,44px); border-radius:var(--r-lg);
   border:1px solid var(--border-2);
   background:linear-gradient(120deg, var(--a1-soft), var(--a2-soft) 50%, transparent 92%); }
 .anchor-num{ display:flex; align-items:baseline; gap:8px; }
 .anchor-cur{ font-family:var(--f-mono); font-size:13px; color:var(--tx-3); }
-.anchor-num b{ font-family:var(--f-disp); font-size:clamp(2.3rem,6vw,3.6rem); font-weight:700;
-  letter-spacing:-.035em; line-height:1; background:var(--grad);
+.anchor-num b{ font-family:var(--f-disp); font-size:clamp(3.6rem,9vw,6rem); font-weight:700;
+  letter-spacing:-.045em; line-height:.9; background:var(--grad);
   -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
-.anchor-per{ font-size:14px; color:var(--tx-3); }
+.anchor-per{ font-size:13px; color:var(--tx-3); line-height:1.35; letter-spacing:.04em;
+  text-transform:uppercase; font-weight:600; }
 .anchor-txt h3{ font-family:var(--f-disp); font-size:1.25rem; font-weight:600; letter-spacing:-.018em; }
 .anchor-txt p{ margin-top:11px; font-size:14.5px; color:var(--tx-2); line-height:1.7; }
 .anchor-txt b{ color:var(--tx); font-weight:600; }

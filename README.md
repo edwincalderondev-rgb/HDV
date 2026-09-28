@@ -4,7 +4,7 @@ Sitio personal de **Edwin Belisario Calderón Aguilera**, Ingeniero de Sistemas 
 Industrial. Incluye trayectoria, proyectos, stack técnico, referencias de mercado y
 **«The Architect»**, un asistente conversacional que responde preguntas sobre el perfil.
 
-🔗 **https://edwincalderonaguilera.github.io/Hoja-De-Vida/**
+🔗 **https://edwincalderondev-rgb.github.io/HDV/**
 
 ---
 

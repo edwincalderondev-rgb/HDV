@@ -243,7 +243,7 @@
       { ic: '◆', t: 'Trayectoria',           s: 'Once años, sin pausas',                    go: '#trayectoria' },
       { ic: '◆', t: 'Proyectos',             s: 'Software que está en producción',          go: '#proyectos' },
       { ic: '◆', t: 'Stack técnico',         s: 'Tecnologías puestas en producción',        go: '#stack' },
-      { ic: '◆', t: 'Valor de mercado',      s: 'Referencias salariales 2026 con fuente',   go: '#valor' },
+      { ic: '◆', t: 'Cargos',                s: 'A qué cargos corresponde el perfil',       go: '#valor' },
       { ic: '◆', t: 'Contacto',              s: 'Correo, WhatsApp, LinkedIn y GitHub',      go: '#contacto' },
       { ic: '↓', t: 'Descargar hoja de vida (PDF)', s: 'Versión maquetada, 4 páginas',      href: 'assets/docs/HDV_Edwin_Calderon_Senior.pdf' },
       { ic: '↓', t: 'Descargar hoja de vida (Word)', s: 'Versión editable',                 href: 'assets/docs/HDV_Edwin_Calderon_Senior.docx' },

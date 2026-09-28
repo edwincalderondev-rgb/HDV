@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://edwincalderonaguilera.github.io/Hoja-De-Vida/sitemap.xml
+Sitemap: https://edwincalderondev-rgb.github.io/HDV/sitemap.xml
