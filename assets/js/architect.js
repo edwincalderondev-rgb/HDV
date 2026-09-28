@@ -190,11 +190,14 @@
   function smalltalkIntent(q) {
     const n = normalize(q);
     const words = n.split(' ').filter(Boolean);
+    if (words.length > 7) return null;          // una frase larga rara vez es un saludo
+    const padded = ' ' + n + ' ';
     for (const s of KB.smalltalk) {
       for (const k of s.k) {
         const nk = normalize(k);
         if (n === nk) return s;
-        if (words.length <= 6 && n.includes(nk)) return s;
+        // por palabra completa: evita que 'hi' dispare dentro de 'hizo'
+        if (padded.includes(' ' + nk + ' ')) return s;
       }
     }
     return null;

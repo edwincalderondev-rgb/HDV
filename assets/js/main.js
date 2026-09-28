@@ -269,6 +269,7 @@
       { ic: '◆', t: 'Proyectos',             s: 'Software que está en producción',          go: '#proyectos' },
       { ic: '◆', t: 'Stack técnico',         s: 'Tecnologías puestas en producción',        go: '#stack' },
       { ic: '◆', t: 'Cargos',                s: 'A qué cargos corresponde el perfil',       go: '#valor' },
+      { ic: '◆', t: 'Referencias',           s: 'Quién puede responder por mi trabajo',     go: '#referencias' },
       { ic: '◆', t: 'Contacto',              s: 'Correo, WhatsApp, LinkedIn y GitHub',      go: '#contacto' },
       { ic: '↗', t: 'Abrir hoja de vida (PDF)', s: 'Versión maquetada, 4 páginas',          href: 'assets/docs/HDV_Edwin_Calderon_Senior.pdf' },
       { ic: '↗', t: 'Abrir portafolio de diseño', s: 'Marca, contenido digital y XR',        href: 'assets/docs/Portafolio_Diseno_y_Contenido.pdf' },

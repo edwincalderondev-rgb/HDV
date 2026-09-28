@@ -656,6 +656,44 @@ ul{ list-style:none; }
 .foot p{ font-size:13px; color:var(--tx-3); }
 .foot-note{ max-width:50ch; text-align:right; }
 
+
+/* ── «Senior» destacado en el hero ── */
+.sr-senior{ font-style:normal; font-weight:700; background:var(--grad);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+
+/* ── nota de contexto de sector ── */
+.mkt-note{ margin-top:22px; border-radius:var(--r-lg); overflow:hidden;
+  border:1px solid var(--border-2);
+  background:linear-gradient(120deg, var(--a1-soft), var(--a2-soft) 55%, transparent 95%); }
+.mkt-tag{ padding:13px 22px; font-family:var(--f-mono); font-size:11px; font-weight:500;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--a1);
+  border-bottom:1px solid var(--border); background:var(--surface); }
+.mkt-body{ padding:clamp(24px,3.4vw,34px); }
+.mkt-body p{ font-size:15px; line-height:1.72; color:var(--tx-2); max-width:78ch; }
+.mkt-body p + p{ margin-top:14px; }
+.mkt-body b{ color:var(--tx); font-weight:650; }
+.mkt-band{ margin-top:18px !important; padding:18px 22px; border-radius:var(--r);
+  background:var(--bg-3); border:1px solid var(--border-2); }
+.mkt-close{ margin-top:18px !important; font-family:var(--f-disp); font-size:clamp(1.05rem,2vw,1.28rem);
+  font-weight:600; color:var(--tx) !important; letter-spacing:-.015em; line-height:1.45; }
+.mkt-src{ margin-top:20px; padding-top:14px; border-top:1px solid var(--border);
+  font-size:12px; color:var(--tx-3); line-height:1.6; }
+
+/* ── referencias ── */
+.refs{ display:grid; grid-template-columns:repeat(auto-fit,minmax(310px,1fr)); gap:14px; }
+.ref{ display:flex; gap:16px; padding:24px 24px; border-radius:var(--r);
+  border:1px solid var(--border); background:var(--bg-3);
+  transition:transform .3s var(--ease), border-color .3s, box-shadow .3s; }
+.ref:hover{ transform:translateY(-3px); border-color:var(--border-2); box-shadow:var(--sh); }
+.ref-ini{ width:46px; height:46px; flex:0 0 46px; border-radius:14px; display:grid; place-items:center;
+  font-family:var(--f-disp); font-weight:700; font-size:15px; letter-spacing:.5px;
+  color:#050A11; background:var(--grad); }
+[data-theme="light"] .ref-ini{ color:#fff; }
+.ref-tx{ min-width:0; }
+.ref-tx h3{ font-family:var(--f-disp); font-size:1.06rem; font-weight:600; letter-spacing:-.012em; }
+.ref-rol{ margin-top:4px; font-size:12.5px; color:var(--a1); font-weight:500; line-height:1.45; }
+.ref-ctx{ margin-top:10px; font-size:13.5px; color:var(--tx-2); line-height:1.62; }
+
 /* ───────────────────── COMMAND PALETTE ───────────────────── */
 .cmd{ position:fixed; inset:0; z-index:160; display:grid; place-items:start center; padding:12vh 20px 20px; }
 .cmd[hidden]{ display:none; }

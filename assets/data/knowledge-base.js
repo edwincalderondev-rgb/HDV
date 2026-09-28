@@ -18,11 +18,12 @@ window.ARCHITECT_KB = {
     suggestions: [
       '¿Por qué es un perfil senior?',
       '¿A qué cargos corresponde su perfil?',
+      '¿Quién puede dar referencias suyas?',
       '¿Qué experiencia tiene en ciberseguridad?',
+      '¿Sabe cloud, AWS o Docker?',
       '¿Ha liderado equipos?',
       '¿Qué ha construido exactamente?',
-      '¿Qué tecnologías domina?',
-      '¿Qué hace hoy en Petroil?',
+      '¿Cuáles son sus debilidades?',
       '¿Cómo lo contacto?'
     ]
   },
@@ -68,27 +69,178 @@ window.ARCHITECT_KB = {
 
   /* ───────────────── conversación básica ───────────────── */
   smalltalk: [
-    { k: ['hola','buenas','hey','saludos','buenos dias','buenas tardes','buenas noches','que tal','holi','ola'],
-      a: `<p>Hola. Soy <b>The Architect</b>. Puedo contarte sobre la trayectoria, los proyectos, el stack técnico o
-          las referencias de mercado de Edwin Calderón. ¿Por dónde quieres empezar?</p>` },
-    { k: ['gracias','muchas gracias','thanks','genial','excelente','perfecto','buenisimo','ok gracias'],
-      a: `<p>Con gusto. Si quieres seguir, puedo detallarte algún proyecto en particular, su experiencia en
-          ciberseguridad, o los cargos del mercado a los que corresponde su perfil.</p>` },
-    { k: ['adios','chao','hasta luego','bye','nos vemos'],
-      a: `<p>Hasta luego. Si necesitas contactarlo directamente: <b>edwinaguilera777@gmail.com</b> o
-          <b>+57 301 409 9377</b>.</p>` },
-    { k: ['quien eres','que eres','como funcionas','eres una ia','eres chatgpt','eres un bot','que modelo eres'],
-      a: `<p>Soy <b>The Architect</b>, un asistente construido por Edwin para este portafolio.</p>
+    { k: ['hola','buenas','hey','saludos','buenos dias','buenas tardes','buenas noches','que tal','holi','ola','hello','hi','alo'],
+      a: `<p>Hola. Soy <b>The Architect</b>, el asistente de perfil de Edwin Calderón.</p>
+          <p>Puedo contarte sobre su trayectoria, sus proyectos, su stack técnico, los cargos del mercado a los que
+          corresponde su perfil o quién puede dar referencias suyas. ¿Por dónde quieres empezar?</p>` },
+
+    { k: ['gracias','muchas gracias','thanks','thank you','genial','excelente','perfecto','buenisimo','ok gracias','vale gracias','muy util'],
+      a: `<p>Con gusto. Si quieres seguir, puedo detallarte un proyecto en particular, su experiencia en ciberseguridad,
+          los cargos del mercado a los que corresponde su perfil, o darte los datos para contactarlo directamente.</p>` },
+
+    { k: ['adios','chao','hasta luego','bye','nos vemos','me voy','listo gracias','eso es todo'],
+      a: `<p>Hasta luego. Si quieres seguir la conversación con él directamente:
+          <b>edwinaguilera777@gmail.com</b> o <b>+57 301 409 9377</b>.</p>` },
+
+    { k: ['quien eres','que eres','como funcionas','eres una ia','eres chatgpt','eres un bot','que modelo eres',
+          'eres humano','eres real','quien te hizo','quien te programo','eres gpt','usas chatgpt'],
+      a: `<p>Soy <b>The Architect</b>, y me construyó Edwin para este portafolio.</p>
           <p>No soy un modelo de lenguaje ni consumo ninguna API: soy un <b>motor de recuperación de información</b>
           escrito a mano en JavaScript. Normalizo y tokenizo tu pregunta en español, la contrasto contra un índice
           invertido con ponderación <b>TF-IDF</b>, aplico expansión de sinónimos y refuerzo por bigramas, y devuelvo
           la entrada más relevante de una base de conocimiento curada.</p>
           <p>Todo corre <b>íntegramente en tu navegador</b>: sin backend, sin API keys, sin costo de inferencia y sin
-          que ningún dato tuyo salga de tu equipo. Que exista es, en sí mismo, parte de su portafolio.</p>` }
+          que ningún dato tuyo salga de tu equipo. Que yo exista es, en sí mismo, parte de su portafolio.</p>` },
+
+    { k: ['como estas','como te va','que haces','todo bien','como vas'],
+      a: `<p>Operativo y con la base de conocimiento cargada, que es lo máximo a lo que puede aspirar un índice
+          invertido. ¿Qué quieres saber del perfil de Edwin?</p>` },
+
+    { k: ['ayuda','que puedes hacer','que sabes','opciones','menu','que puedo preguntarte','como te uso'],
+      a: `<p>Conozco a fondo el perfil de Edwin Calderón. Puedes preguntarme por:</p>
+          <ul>
+            <li><b>Trayectoria:</b> dónde ha trabajado, cuántos años lleva, qué ha liderado.</li>
+            <li><b>Proyectos:</b> qué ha construido y con qué decisiones técnicas.</li>
+            <li><b>Stack:</b> lenguajes, infraestructura, seguridad, datos, IA, XR.</li>
+            <li><b>Cargos:</b> a qué posiciones del mercado corresponde su perfil.</li>
+            <li><b>Referencias:</b> quién puede responder por su trabajo.</li>
+            <li><b>Dudas incómodas:</b> debilidades, vacíos del CV, qué no sabe todavía.</li>
+          </ul>` },
+
+    { k: ['jaja','jeje','lol','xd','broma','chiste','cuentame un chiste','eres gracioso'],
+      a: `<p>Mi sentido del humor está fuera de mi base de conocimiento — soy bueno con la trayectoria de Edwin y
+          bastante malo con los remates. ¿Te cuento algo del perfil?</p>` },
+
+    { k: ['tonto','inutil','no sirves','malo','pesimo','no sabes nada','eres malo'],
+      a: `<p>Es posible: solo sé lo que Edwin dejó en mi base de conocimiento, y prefiero admitir un vacío antes que
+          inventar una respuesta. Si te quedó una duda que no supe resolver, escríbele directo a
+          <b>edwinaguilera777@gmail.com</b>: él sí responde todo.</p>` },
+
+    { k: ['quien es el mejor','te gusta tu trabajo','tienes sentimientos','estas vivo'],
+      a: `<p>Soy un índice invertido con buena presentación: sin sentimientos, sin opiniones y sin ambiciones más allá
+          de responderte bien sobre el perfil de Edwin. ¿Seguimos con eso?</p>` }
   ],
 
   /* ───────────────── entradas ───────────────── */
   entries: [
+
+  /* ═══ REFERENCIAS ═══ */
+  {
+    id: 'referencias', cat: 'Datos',
+    tags: ['referencia','referencias','quien responde','recomendacion','recomiendan','respaldo','contactos',
+           'jefes anteriores','exjefes','verificar','verifico','verifica','comprobar','corroborar','confirmar',
+           'llamar a alguien','validar','testimonios','avales','constatar'],
+    q: ['quien puede dar referencias suyas','tiene referencias','con quien puedo verificar su trabajo',
+        'con quien verifico su trabajo','quien responde por el','me puede dar contactos de sus jefes',
+        'como corroboro lo que dice la hoja de vida'],
+    a: `<p>Sí, cinco personas que dirigieron, contrataron o acompañaron directamente los proyectos que aparecen
+      en este portafolio:</p>
+      <ul>
+        <li><b>Ubaldo Rodríguez</b> — Director general del proyecto BPIN de salud mental, donde Edwin coordinó el
+          desarrollo de la plataforma y lideró un equipo de tres desarrolladores.</li>
+        <li><b>José Luis Lobo</b> — Vicedecano y Director en la Universidad Sergio Arboleda, Santa Marta;
+          han trabajado juntos en proyectos de nuevas tecnologías y de seguridad y salud en el trabajo.</li>
+        <li><b>Pedro Luis Salcedo</b> — Director del Departamento de Ingeniería Industrial.</li>
+        <li><b>Luis Villarreal</b> — Representante legal de Fundación Talentos, operador del ICBF, donde Edwin dirigió
+          el componente de sistematización y gestión de información.</li>
+        <li><b>Liceth del Carmen Niño</b> — Directora del programa de Ingeniería de Sistemas.</li>
+      </ul>
+      <p>Sus teléfonos y correos <b>no se publican aquí</b>, por respeto a sus datos personales. Se entregan a
+      solicitud dentro de un proceso formal, junto con los soportes contractuales. Pídeselos a Edwin:
+      <b>edwinaguilera777@gmail.com</b>.</p>`
+  },
+
+  /* ═══ OBJECIONES ═══ */
+  {
+    id: 'obj-empresas-grandes', cat: 'Objeciones',
+    tags: ['empresas grandes','multinacional','corporativo','solo universidad','empresas pequenas',
+           'experiencia corporativa','empresa reconocida','marca conocida','startup','nombre grande'],
+    q: ['por que no ha trabajado en empresas grandes','le falta experiencia corporativa',
+        'solo ha trabajado en la universidad','ha trabajado en multinacionales'],
+    a: `<p>Es una observación justa, y conviene responderla de frente.</p>
+      <p>Su trayectoria es en <b>universidad pública, programas sociales del ICBF, emprendimiento propio y una
+      refinería</b>. No hay multinacionales ni empresas de producto en la lista.</p>
+      <p>Lo que sí hay es algo que en una empresa grande difícilmente habría vivido: <b>responsabilidad total sobre el
+      resultado</b>. En una organización con 200 ingenieros se es una pieza; en las suyas, si el servidor caía, no
+      había a quién escalar. Eso produce un perfil que <b>no espera instrucciones</b> y que sabe operar donde no hay
+      estructura previa —exactamente lo que necesita una empresa que está montando su capacidad tecnológica—.</p>
+      <p>La contracara honesta: si buscas a alguien con experiencia en procesos muy formalizados, comités de
+      arquitectura y equipos de decenas de personas, ese contexto sería nuevo para él.</p>`
+  },
+  {
+    id: 'obj-cloud', cat: 'Objeciones',
+    tags: ['cloud','nube','aws','azure','gcp','docker','kubernetes','contenedores','devops','ci cd','pipeline',
+           'despliegue automatico','sabe aws','maneja docker','infraestructura como codigo'],
+    q: ['sabe cloud','maneja aws','sabe docker','tiene experiencia en devops','conoce kubernetes','usa ci cd'],
+    a: `<p>Te doy el mapa completo, con sus límites.</p>
+      <p><b>Lo que hace hoy a diario:</b> administra servidores <b>Linux</b> en producción —incluyendo despliegues en
+      <b>DigitalOcean</b>—, configura <b>Nginx</b> y <b>Apache</b>, gestiona certificados <b>SSL/TLS</b>, tareas
+      programadas con <b>cron</b>, respaldos, reglas de <b>firewall</b> y <b>VPN</b>. Ha respondido por la
+      disponibilidad de plataformas con usuarios reales durante años.</p>
+      <p><b>Lo que maneja a nivel de fundamentos:</b> <b>Docker</b> y <b>AWS</b>, para entornos reproducibles y
+      despliegue en la nube.</p>
+      <p><b>Lo que no va a decirte que domina:</b> Kubernetes a escala ni pipelines de CI/CD maduros en producción.
+      Es el frente donde más está invirtiendo ahora mismo, y sobre una base de administración de sistemas que ya
+      existe —que es justo lo que hace que la curva sea corta—.</p>`
+  },
+  {
+    id: 'obj-gap', cat: 'Objeciones',
+    tags: ['vacio','gap','hueco','2020','2019','2021','pandemia','que hizo entre','periodo sin trabajar','desempleado',
+           'discontinuidad','salto en el cv'],
+    q: ['que hizo entre 2019 y 2021','hay un vacio en su hoja de vida','estuvo sin trabajar','que paso en la pandemia'],
+    a: `<p>No hay vacío: hay un cambio de foco.</p>
+      <p>Entre finales de 2019 y mediados de 2021 estuvo dedicado a <b>VR Zone</b>, la empresa de realidad virtual que
+      fundó en 2018 y que sigue operando. Ese período coincide con la pandemia, que golpeó de lleno a un negocio
+      presencial de experiencias: le tocó sostener la operación, rediseñar procesos y reconstruir la estrategia digital.</p>
+      <p>En septiembre de 2021 entró como Coordinador de Desarrollo de Software en el proyecto BPIN de la Universidad
+      del Magdalena. VR Zone sigue activa en paralelo hasta hoy.</p>`
+  },
+  {
+    id: 'obj-disponibilidad', cat: 'Objeciones',
+    tags: ['cuando puede empezar','disponibilidad inmediata','preaviso','tiempo de ingreso','arranca cuando',
+           'cuanto tarda','empezar a trabajar','incorporacion'],
+    q: ['cuando puede empezar','tiene disponibilidad inmediata','cuanto tarda en incorporarse'],
+    a: `<p>Está vinculado actualmente a Petroil S.A. y abierto a conversar propuestas que correspondan a su nivel
+      de experiencia y responsabilidad.</p>
+      <p>Los tiempos concretos de incorporación —y cualquier compromiso de transición con su vinculación actual— los
+      define él directamente. Escríbele a <b>edwinaguilera777@gmail.com</b> o al <b>+57 301 409 9377</b>.</p>
+      <p>Trabaja en modalidad presencial, híbrida o remota, con base en Santa Marta.</p>`
+  },
+  {
+    id: 'obj-ingles', cat: 'Objeciones',
+    tags: ['ingles','english','idioma','bilingue','habla ingles','nivel de ingles','b2','reuniones en ingles'],
+    q: ['habla ingles','que nivel de ingles tiene','puede trabajar en ingles','es bilingue'],
+    a: `<p><b>Inglés B2 (intermedio).</b> Sin adornos:</p>
+      <ul>
+        <li><b>Sin fricción:</b> documentación técnica, código, artículos, comunicación escrita, seguimiento de
+          reuniones grabadas.</li>
+        <li><b>Con esfuerzo:</b> reuniones en vivo con hablantes nativos a velocidad natural.</li>
+        <li><b>Brecha real:</b> negociación fluida o presentaciones a clientes internacionales.</li>
+      </ul>
+      <p>Si el rol es en español o mayormente asíncrono, no es un obstáculo. Si exige reuniones diarias en inglés,
+      hay una brecha que cerrar y conviene decirlo antes, no después.</p>`
+  },
+  {
+    id: 'sector', cat: 'Datos',
+    tags: ['mercado','sector','demanda','escasez','talento','deuda tecnica','tendencia','contexto','brecha',
+           'por que contratar un perfil asi','vale la pena tener un ingeniero','necesidad'],
+    q: ['como esta el mercado de ti en colombia','hay escasez de talento tecnologico',
+        'que tan demandado es este perfil','que pasa si una empresa no tiene perfil tecnico'],
+    a: `<p>Algunos datos públicos que ayudan a ubicar el perfil:</p>
+      <ul>
+        <li>Colombia arrastra una <b>demanda insatisfecha cercana a 85.000 profesionales de TI</b>, y el
+          <b>64 % de las organizaciones</b> del país reporta dificultades para cubrir posiciones especializadas.</li>
+        <li>El perfil más buscado para 2026 no es el que solo programa, sino el <b>profesional híbrido</b>: quien
+          traduce una necesidad operativa en una solución construida y sostenida.</li>
+        <li>McKinsey estima que la <b>deuda técnica</b> equivale a entre el <b>20 % y el 40 %</b> del valor del
+          patrimonio tecnológico de una empresa, y que entre el 10 % y el 20 % del presupuesto de desarrollo
+          termina destinado a corregirla. Las organizaciones que mejor la gestionan crecen en ingresos
+          <b>un 20 % más</b> que las que no.</li>
+      </ul>
+      <p>Dicho de otro modo: contar con un perfil así dejó de ser una ventaja competitiva y se está volviendo una
+      condición para no quedarse atrás.</p>`,
+    src: 'ManpowerGroup Colombia y gremios del sector (brecha de talento TI, 2026) · McKinsey & Company (costo de la deuda técnica)'
+  },
 
   /* ═══ CARGOS ═══ */
   {
@@ -175,9 +327,9 @@ window.ARCHITECT_KB = {
     q: ['que hace en petroil','donde trabaja ahora','cual es su trabajo actual','que esta haciendo hoy','cuentame de petroil'],
     a: `<p>En <b>Petroil S.A.</b>, una refinería de petróleo en Santa Marta, es el <b>Ingeniero de Tecnología y
       Transformación Digital</b> — en la práctica, el área de TI completa de la compañía.</p>
-      <p>Entró como practicante de Ingeniería Industrial en Aseguramiento de la Calidad. Detectó y reportó fallas
-      críticas en la plataforma digital corporativa; la organización —que no tiene área de TI ni un solo ingeniero
-      de sistemas en toda su planta— le asignó la responsabilidad técnica integral y una compensación adicional por ello.</p>
+      <p>Se vinculó inicialmente al área de Aseguramiento de la Calidad. Al identificar oportunidades de mejora en la
+      plataforma digital corporativa, la organización amplió su alcance a los frentes de tecnología que hoy acompaña,
+      con reconocimiento económico adicional.</p>
       <p><b>Lo que tiene a cargo:</b></p>
       <ul>
         <li><b>Auditoría de ciberseguridad</b> de la infraestructura corporativa, con reporte formal de hallazgos,
@@ -252,10 +404,14 @@ window.ARCHITECT_KB = {
       y OPSP-VAD-1171-2022.</p>
       <ul>
         <li><b>Lideró un equipo de 3 desarrolladores</b>: definió arquitectura, estándares de código, alcance y entregables.</li>
-        <li>Diseñó y desarrolló una <b>plataforma web full-stack (Angular + PHP/Laravel + MySQL)</b> para captura,
-          validación y gestión de datos de campo y laboratorio, reemplazando procesos manuales dispersos.</li>
-        <li>Automatizó el procesamiento de información y la generación de reportes, reduciendo drásticamente el tiempo
-          entre la recolección del dato y la decisión.</li>
+        <li>Diseñó y desarrolló una <b>plataforma full-stack (Angular + PHP/Laravel + MySQL)</b> que no solo recogía
+          información: <b>calculaba el resultado</b>. El usuario respondía cerca de <b>150 preguntas</b> y el sistema
+          puntuaba, clasificaba el perfil psicológico y emitía un <b>informe en PDF</b> con los rasgos detectados y la
+          recomendación de acompañamiento.</li>
+        <li>Implementó el <b>enrutamiento clínico priorizado</b>: los informes con indicadores críticos —como conductas
+          suicidas— escalaban primero para contacto con un profesional en psicología.</li>
+        <li>Construyó el <b>chatbot de orientación</b> y el módulo académico con minicursos de autoconocimiento y
+          tamizaje. <b>Más de 5.000 personas atendidas.</b></li>
         <li>Administró <b>bases de datos y despliegues en servidores Linux</b>, respondiendo por disponibilidad y continuidad.</li>
         <li>Coordinó el levantamiento de información in situ y la sistematización de los productos científicos.</li>
       </ul>
@@ -347,8 +503,8 @@ window.ARCHITECT_KB = {
           plantillas y de las bases de datos institucionales — automatizando un proceso que antes era enteramente manual.
           Su primer trabajo ya fue construir una herramienta, no operar una.</li>
         <li>Por rendimiento lo movieron a un proyecto de mayor responsabilidad: el programa <b>«Generaciones con
-          Bienestar»</b> del ICBF. Empezó administrando la regional Magdalena y terminó llevando también
-          <b>La Guajira y Cesar</b>, con <b>cerca de 180 promotores</b> a cargo entre las tres.</li>
+          Bienestar»</b> del ICBF, donde pasó a <b>coordinar el componente de información de tres regionales</b>
+          —Magdalena, La Guajira y Cesar—, articulando el reporte de <b>cerca de 180 promotores</b> en campo.</li>
         <li>El programa se ubicó en el <b>top nacional de operadores</b> en el cargue del sistema de información «Cuéntame».</li>
       </ul>
       <p>El patrón se repite en toda su carrera: entra en un rol, rinde por encima de lo esperado y le amplían el alcance.</p>`
@@ -430,13 +586,15 @@ window.ARCHITECT_KB = {
     q: ['que tecnologias maneja','cual es su stack','que lenguajes sabe','que herramientas domina','que sabe hacer tecnicamente'],
     a: `<p>Stack que ha puesto <b>en producción</b>, no solo estudiado:</p>
       <ul>
-        <li><b>Lenguajes:</b> JavaScript (ES6+), Node.js, PHP, Python, SQL, R, VBA/Access.</li>
+        <li><b>Lenguajes:</b> JavaScript (ES6+), TypeScript, Node.js, PHP, Python, SQL, R, VBA/Access.</li>
         <li><b>Frontend y UX:</b> Angular, HTML5, CSS3, diseño de interfaces, accesibilidad, responsive.</li>
         <li><b>Backend y datos:</b> Laravel, MySQL, SQLite (sql.js/WASM), modelado relacional, migraciones de esquema
           versionadas, diseño de APIs.</li>
         <li><b>Escritorio:</b> Electron (main–renderer–preload, IPC, contextBridge), electron-builder, NSIS.</li>
-        <li><b>Infraestructura:</b> Linux, administración de servidores, despliegues, redes, Git.</li>
-        <li><b>Ciberseguridad:</b> auditoría de seguridad, análisis de vulnerabilidades, hardening, respuesta a incidentes.</li>
+        <li><b>Infraestructura y despliegue:</b> Linux, Nginx, Apache, SSL/TLS, DigitalOcean, cron, respaldos, Git.</li>
+        <li><b>Contenedores y nube:</b> Docker, AWS, entornos reproducibles.</li>
+        <li><b>Ciberseguridad y redes:</b> auditoría, análisis de vulnerabilidades, hardening, firewall, VPN,
+          respuesta a incidentes.</li>
         <li><b>Datos y BI:</b> Power BI, Excel avanzado, SPSS, R Studio, análisis y visualización de datos.</li>
         <li><b>IA aplicada:</b> asistentes conversacionales, recuperación de información, ingeniería de prompts,
           IA generativa para texto, imagen y video.</li>
@@ -619,7 +777,7 @@ window.ARCHITECT_KB = {
     q: ['que estudio','donde estudio','tiene titulo','cual es su formacion academica','es profesional'],
     a: `<ul>
         <li><b>Ingeniería de Sistemas</b> — Universidad del Magdalena · <b>2018</b> (título obtenido).</li>
-        <li><b>Ingeniería Industrial</b> — Universidad del Magdalena · <b>2023 – 2026</b> (en curso, fecha estimada de grado).</li>
+        <li><b>Ingeniería Industrial</b> — Universidad del Magdalena · <b>2023 – 2026</b>.</li>
       </ul>
       <p><b>Idiomas:</b> español nativo · inglés B2 (intermedio).</p>
       <p><b>Registro legal:</b> software de autoría propia registrado ante la <b>Dirección Nacional de Derecho de Autor</b>
