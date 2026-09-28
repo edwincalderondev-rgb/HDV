@@ -315,7 +315,7 @@ window.ARCHITECT_KB = {
       <p><b>Como ingeniero de sistemas</b> ejecuta: arquitectura, desarrollo full-stack, modelado de datos,
       infraestructura, despliegue y seguridad.</p>
       <p>El resultado es un perfil de <b>problem-owner end-to-end</b>. Casos concretos: en Petroil detectó las fallas
-      de la plataforma digital y terminó construyendo el reemplazo completo; en InventarioTienda diagnosticó un error
+      de la plataforma digital y terminó construyendo el reemplazo completo; en Núcleo diagnosticó un error
       contable en la lógica de cartera y reescribió la asignación de costos. En ambos casos el hallazgo vino de la
       mirada de procesos y la solución de la mirada de sistemas.</p>`
   },
@@ -512,10 +512,10 @@ window.ARCHITECT_KB = {
 
   /* ═══ PROYECTOS ═══ */
   {
-    id: 'inventario-tienda', cat: 'Proyectos',
-    tags: ['inventariotienda','inventario','erp','pos','punto de venta','electron','sqlite','fifo','producto','escritorio','app','facturacion','termica','escpos','cartera'],
-    q: ['que es inventariotienda','cuentame del erp','que software ha construido','que aplicaciones ha hecho','proyecto de inventario'],
-    a: `<p><b>InventarioTienda</b> — ERP y Punto de Venta de escritorio. Producto propio, <b>en producción con clientes
+    id: 'nucleo-erp', cat: 'Proyectos',
+    tags: ['nucleo','inventario','erp','pos','punto de venta','electron','sqlite','fifo','producto','escritorio','app','facturacion','termica','escpos','cartera','software propio','producto propio'],
+    q: ['que es nucleo','cuentame del erp','que software ha construido','que aplicaciones ha hecho','proyecto de inventario','cual es su producto propio'],
+    a: `<p><b>Núcleo</b> — ERP y Punto de Venta de escritorio. Producto propio, <b>en producción con clientes
       reales</b> y <b>registrado ante la DNDA</b>.</p>
       <p>Gestiona un negocio de venta al por mayor y detal completo: inventario multi-presentación, ventas con lector
       de código de barras, cartera de clientes, reportes financieros y facturación térmica.</p>
@@ -638,7 +638,7 @@ window.ARCHITECT_KB = {
         <li><b>BI y analítica:</b> Power BI, Excel avanzado, SPSS y R Studio para análisis y visualización.</li>
         <li><b>Automatización de reportería:</b> desde su generador Access→Excel de 2015 hasta la generación
           automatizada de reportes en la plataforma BPIN y los reportes financieros con analítica por producto y
-          período en InventarioTienda.</li>
+          período en Núcleo.</li>
         <li><b>Datos científicos:</b> pipeline de recolección y análisis de señales fisiológicas (ECG) en el proyecto TDAH.</li>
       </ul>`
   },
@@ -720,7 +720,7 @@ window.ARCHITECT_KB = {
         <li><b>Diagnostica antes de construir.</b> Su formación industrial hace que no construya software innecesario.
           Detecta el problema real —como el error contable en cartera o las fallas de la plataforma de Petroil— y
           resuelve la causa.</li>
-        <li><b>Entrega cosas que funcionan.</b> InventarioTienda está en producción con clientes reales y registrado
+        <li><b>Entrega cosas que funcionan.</b> Núcleo está en producción con clientes reales y registrado
           ante la DNDA. La plataforma BPIN se ejecutó con recursos públicos y está certificada. No son demos.</li>
         <li><b>Lidera.</b> Equipos técnicos de desarrollo y equipos operativos de hasta 50 personas, con
           reconocimiento nacional por la ejecución.</li>
@@ -872,6 +872,9 @@ window.ARCHITECT_KB = {
     a: `<p>Sí. Desde la sección de <b>contacto</b> de este sitio puedes descargar:</p>
       <ul>
         <li><b>Hoja de vida en PDF</b> — versión maquetada, 4 páginas.</li>
+        <li><b>Perfil ejecutivo · Oil &amp; Gas</b> — versión compacta de 2 páginas, enfocada en el sector de
+          hidrocarburos: ciberseguridad de infraestructura, continuidad operativa, trazabilidad documental y
+          entrenamiento HSE con realidad virtual.</li>
         <li><b>Hoja de vida en Word</b> — versión editable y legible por sistemas ATS.</li>
         <li><b>Portafolio de diseño y contenido digital</b> — piezas, marca, multimedia y XR.</li>
         <li><b>Certificado laboral</b> de la Universidad del Magdalena, que acredita las cinco órdenes de servicios profesionales.</li>
@@ -882,7 +885,7 @@ window.ARCHITECT_KB = {
     id: 'hdv-descarga', cat: 'Datos',
     tags: ['Daniela','quien es Daniela'],
     q: ['Daniela','quien es Daniela'],
-    a: `<p>Es una niña bonita de <b>ojos lindos</b></p>
+    a: `<p>Es una niña bonita de <b>ojos lindos DCRI</b></p>
       <p><3</p>`
   }
   ]

@@ -87,10 +87,12 @@
     apply(next);
     if (persist !== false) {
       try { localStorage.setItem(STORE, next); } catch (e) {}
-      var u = new URL(location.href);
-      if (next === 'en') u.searchParams.set('lang', 'en');
-      else u.searchParams.delete('lang');
-      history.replaceState(null, '', u);
+      try {                       // en file:// o contextos restringidos esto puede fallar
+        var u = new URL(location.href);
+        if (next === 'en') u.searchParams.set('lang', 'en');
+        else u.searchParams.delete('lang');
+        history.replaceState(null, '', u);
+      } catch (e) {}
     }
   }
 
