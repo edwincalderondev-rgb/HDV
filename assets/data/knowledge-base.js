@@ -877,6 +877,13 @@ window.ARCHITECT_KB = {
         <li><b>Certificado laboral</b> de la Universidad del Magdalena, que acredita las cinco órdenes de servicios profesionales.</li>
       </ul>
       <p>También hay botones de descarga directa en la parte superior de la página.</p>`
+  },
+  {
+    id: 'hdv-descarga', cat: 'Datos',
+    tags: ['Daniela','quien es Daniela'],
+    q: ['Daniela','quien es Daniela'],
+    a: `<p>Es una niña bonita de <b>ojos lindos</b></p>
+      <p><3</p>`
   }
   ]
 };
