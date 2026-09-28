@@ -262,23 +262,92 @@
     const box = $('#cmd'), inp = $('#cmdInput'), list = $('#cmdList');
     if (!box) return;
 
-    const ITEMS = [
-      { ic: '◆', t: 'Perfil',                s: 'Dos ingenierías, una sola cadena de valor', go: '#perfil' },
-      { ic: '◆', t: 'Caso Petroil',          s: 'Un área de TI de una sola persona',        go: '#caso' },
-      { ic: '◆', t: 'Trayectoria',           s: 'Once años, sin pausas',                    go: '#trayectoria' },
-      { ic: '◆', t: 'Proyectos',             s: 'Software que está en producción',          go: '#proyectos' },
-      { ic: '◆', t: 'Stack técnico',         s: 'Tecnologías puestas en producción',        go: '#stack' },
-      { ic: '◆', t: 'Cargos',                s: 'A qué cargos corresponde el perfil',       go: '#valor' },
-      { ic: '◆', t: 'Referencias',           s: 'Quién puede responder por mi trabajo',     go: '#referencias' },
-      { ic: '◆', t: 'Contacto',              s: 'Correo, WhatsApp, LinkedIn y GitHub',      go: '#contacto' },
-      { ic: '↗', t: 'Abrir hoja de vida (PDF)', s: 'Versión maquetada, 4 páginas',          href: 'assets/docs/HDV_Edwin_Calderon_Senior.pdf' },
-      { ic: '↗', t: 'Abrir portafolio de diseño', s: 'Marca, contenido digital y XR',        href: 'assets/docs/Portafolio_Diseno_y_Contenido.pdf' },
-      { ic: '↗', t: 'Abrir certificado laboral', s: 'Universidad del Magdalena',             href: 'assets/docs/Certificado_Universidad_del_Magdalena.pdf' },
-      { ic: '✉', t: 'Escribir un correo',    s: 'edwinaguilera777@gmail.com',               href: 'mailto:edwinaguilera777@gmail.com' },
-      { ic: '✆', t: 'Abrir WhatsApp',        s: '+57 301 409 9377',                         href: 'https://wa.me/573014099377' },
-      { ic: '✦', t: 'Preguntar a The Architect', s: 'Asistente de perfil',                  act: () => window.Architect && window.Architect.open() },
-      { ic: '◐', t: 'Cambiar tema',          s: 'Claro / oscuro',                           act: () => $('#themeBtn').click() }
+    /* etiquetas de la paleta en los dos idiomas */
+    const PAL = {
+      es: {
+        ph: 'Buscar secciones, proyectos, tecnologías…',
+        foot: ['navegar', 'abrir', 'cerrar'],
+        empty: 'Sin resultados',
+        askPrefix: 'Preguntar', askSub: 'The Architect buscará la respuesta',
+        i: [
+          ['Perfil', 'Dos ingenierías, una sola cadena de valor'],
+          ['Caso Petroil', 'Tecnología aplicada a la industria'],
+          ['Trayectoria', 'Once años, sin pausas'],
+          ['Proyectos', 'Software que está en producción'],
+          ['Stack técnico', 'Tecnologías puestas en producción'],
+          ['Cargos', 'A qué cargos corresponde el perfil'],
+          ['Referencias', 'Quién puede responder por mi trabajo'],
+          ['Contacto', 'Correo, WhatsApp, LinkedIn y GitHub'],
+          ['Abrir hoja de vida (PDF)', 'Versión maquetada, 4 páginas'],
+          ['Abrir portafolio de diseño', 'Marca, contenido digital y XR'],
+          ['Abrir certificado laboral', 'Universidad del Magdalena'],
+          ['Escribir un correo', 'edwinaguilera777@gmail.com'],
+          ['Abrir WhatsApp', '+57 301 409 9377'],
+          ['Preguntar a The Architect', 'Asistente de perfil'],
+          ['Cambiar tema', 'Claro / oscuro'],
+          ['Cambiar a inglés', 'Switch this page to English']
+        ]
+      },
+      en: {
+        ph: 'Search sections, projects, technologies…',
+        foot: ['navigate', 'open', 'close'],
+        empty: 'No results',
+        askPrefix: 'Ask', askSub: 'The Architect will look it up (replies in Spanish)',
+        i: [
+          ['Profile', 'Two engineering degrees, one value chain'],
+          ['Petroil case', 'Technology applied to industry'],
+          ['Career', 'Eleven years, without a break'],
+          ['Projects', 'Software running in production'],
+          ['Technical stack', 'Technologies put into production'],
+          ['Roles', 'Which roles this profile maps to'],
+          ['References', 'Who can vouch for my work'],
+          ['Contact', 'E-mail, WhatsApp, LinkedIn and GitHub'],
+          ['Open CV (PDF)', 'Designed version, 4 pages · in Spanish'],
+          ['Open design portfolio', 'Brand, digital content and XR · in Spanish'],
+          ['Open employment certificate', 'Universidad del Magdalena · in Spanish'],
+          ['Send an e-mail', 'edwinaguilera777@gmail.com'],
+          ['Open WhatsApp', '+57 301 409 9377'],
+          ['Ask The Architect', 'Profile assistant · replies in Spanish'],
+          ['Switch theme', 'Light / dark'],
+          ['Cambiar a español', 'Ver esta página en español']
+        ]
+      }
+    };
+
+    const ACT = [
+      { ic: '◆', go: '#perfil' },
+      { ic: '◆', go: '#caso' },
+      { ic: '◆', go: '#trayectoria' },
+      { ic: '◆', go: '#proyectos' },
+      { ic: '◆', go: '#stack' },
+      { ic: '◆', go: '#valor' },
+      { ic: '◆', go: '#referencias' },
+      { ic: '◆', go: '#contacto' },
+      { ic: '↗', href: 'assets/docs/HDV_Edwin_Calderon_Senior.pdf' },
+      { ic: '↗', href: 'assets/docs/Portafolio_Diseno_y_Contenido.pdf' },
+      { ic: '↗', href: 'assets/docs/Certificado_Universidad_del_Magdalena.pdf' },
+      { ic: '✉', href: 'mailto:edwinaguilera777@gmail.com' },
+      { ic: '✆', href: 'https://wa.me/573014099377' },
+      { ic: '✦', act: () => window.Architect && window.Architect.open() },
+      { ic: '◐', act: () => $('#themeBtn').click() },
+      { ic: '⇄', act: () => window.I18N && window.I18N.set(window.I18N.lang === 'en' ? 'es' : 'en') }
     ];
+
+    const L = () => PAL[(window.I18N && window.I18N.lang) === 'en' ? 'en' : 'es'];
+    const build = () => ACT.map((a, n) => Object.assign({}, a, { t: L().i[n][0], s: L().i[n][1] }));
+
+    let ITEMS = build();
+
+    function relabel() {
+      ITEMS = build();
+      const d = L();
+      inp.placeholder = d.ph;
+      const f = $('.cmd-foot');
+      if (f) f.innerHTML = '<kbd>↑</kbd><kbd>↓</kbd> ' + d.foot[0] +
+        ' · <kbd>↵</kbd> ' + d.foot[1] + ' · <kbd>ESC</kbd> ' + d.foot[2];
+      if (!box.hidden) render(inp.value);
+    }
+    document.addEventListener('langchange', relabel);
 
     let sel = 0, shown = ITEMS;
 
@@ -290,13 +359,13 @@
 
       // si el usuario escribe algo que no es navegación, ofrecer preguntárselo al asistente
       if (nq && !shown.length) {
-        shown = [{ ic: '✦', t: `Preguntar: «${q.trim()}»`, s: 'The Architect buscará la respuesta',
+        shown = [{ ic: '✦', t: `${L().askPrefix}: «${q.trim()}»`, s: L().askSub,
                    act: () => { window.Architect && window.Architect.open();
                                 setTimeout(() => window.Architect.handle(q.trim()), 380); } }];
       }
       sel = 0;
       list.innerHTML = '';
-      if (!shown.length) { list.innerHTML = '<li class="cmd-empty">Sin resultados</li>'; return; }
+      if (!shown.length) { list.innerHTML = '<li class="cmd-empty">' + L().empty + '</li>'; return; }
       shown.forEach((i, n) => {
         const li = document.createElement('li');
         li.className = 'cmd-item' + (n === 0 ? ' is-sel' : '');
@@ -328,7 +397,7 @@
       }
     }
 
-    function open() { box.hidden = false; inp.value = ''; render(''); setTimeout(() => inp.focus(), 40); }
+    function open() { relabel(); box.hidden = false; inp.value = ''; render(''); setTimeout(() => inp.focus(), 40); }
     function close() { box.hidden = true; }
 
     $('#cmdOpen').addEventListener('click', open);
