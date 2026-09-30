@@ -251,7 +251,6 @@
   if (!panel || !log) return;
 
   let opened = false, busy = false, lastFocus = null;
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function scrollDown() { log.scrollTop = log.scrollHeight; }
 
@@ -290,7 +289,6 @@
    */
   function revealProgressive(bubble) {
     scrollDown();
-    if (reduceMotion) return Promise.resolve();
     bubble.classList.add('reveal-blocks');
     const total = 90 + bubble.children.length * 110;
     return new Promise(res => {
@@ -329,7 +327,7 @@
 
     const typing = showTyping();
     const res = ask(question);
-    const delay = reduceMotion ? 120 : 420 + Math.min(620, res.html.length * 0.55);
+    const delay = 420 + Math.min(620, res.html.length * 0.55);
     await new Promise(r => setTimeout(r, delay));
     typing.remove();
 

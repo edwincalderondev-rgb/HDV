@@ -1,6 +1,8 @@
 /* ═══════════════════════════════════════════════════════════════════
    Portafolio — interacciones
-   Vanilla JS. Sin dependencias. Respeta prefers-reduced-motion.
+   Vanilla JS. Sin dependencias.
+   Bajo prefers-reduced-motion se suprimen el desplazamiento de entrada, los
+   focos que siguen al puntero y el desplazamiento suave; el resto se conserva.
    ═══════════════════════════════════════════════════════════════════ */
 (function () {
   'use strict';
@@ -120,7 +122,7 @@
   onScroll();
 
   /* ───────────────────────── REVEAL ───────────────────────── */
-  if ('IntersectionObserver' in window && !RM) {
+  if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
       entries.forEach(en => {
         if (!en.isIntersecting) return;
@@ -143,7 +145,6 @@
       el.dataset.done = '1';
       const end = parseFloat(el.dataset.count) || 0;
       const suffix = el.dataset.suffix || '';
-      if (RM) { el.textContent = end + suffix; return; }
       const dur = 1250, t0 = performance.now();
       const tick = (now) => {
         const p = Math.min(1, (now - t0) / dur);
@@ -188,7 +189,7 @@
   /* ───────────────────────── HERO: CONSTELACIÓN ───────────────────────── */
   (function heroCanvas() {
     const cv = $('#heroCanvas');
-    if (!cv || RM) return;
+    if (!cv) return;
     const ctx = cv.getContext('2d', { alpha: true });
     let w = 0, h = 0, dpr = 1, nodes = [], raf = null, alive = true;
 

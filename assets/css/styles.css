@@ -289,10 +289,18 @@ ul{ list-style:none; }
 .reveal[data-d="3"]{ transition-delay:.21s } .reveal[data-d="4"]{ transition-delay:.28s }
 .reveal[data-d="5"]{ transition-delay:.35s } .reveal[data-d="6"]{ transition-delay:.42s } .reveal[data-d="7"]{ transition-delay:.49s }
 
+/* Movimiento reducido. No se apaga el sitio: se conservan los fundidos, las
+   transiciones de estado, la marquesina, la constelacion del hero y el conteo
+   de cifras. Se suprime unicamente el desplazamiento vertical de entrada —que
+   es el que arrastra el ojo— y, desde el JS, los focos que siguen al puntero. */
 @media (prefers-reduced-motion: reduce){
-  .reveal{ opacity:1; transform:none; transition:none; }
-  *,*::before,*::after{ animation-duration:.001s !important; animation-iteration-count:1 !important;
-    transition-duration:.001s !important; }
+  .reveal{ transform:none; transition:opacity .55s var(--ease); }
+  .reveal.is-in{ transform:none; }
+  /* el foco del cursor no se posiciona sin puntero activo: se oculta para que
+     no quede un manchon fijo en la esquina superior izquierda */
+  .cursor-glow{ opacity:0; }
+  /* las respuestas del chatbot entran en fundido, sin el desplazamiento */
+  .bubble.reveal-blocks > *{ animation-name:blockFade; }
 }
 
 /* ───────────────────────────── HERO ───────────────────────────── */
@@ -825,6 +833,7 @@ ul{ list-style:none; }
 .bubble.reveal-blocks > *:nth-child(8){ animation-delay:.77s }
 .bubble.reveal-blocks > *:nth-child(n+9){ animation-delay:.88s }
 @keyframes blockIn{ from{ opacity:0; transform:translateY(7px) } }
+@keyframes blockFade{ from{ opacity:0 } }
 
 .msg-src{ margin-top:8px; padding-top:8px; border-top:1px solid var(--border);
   font-size:11px; color:var(--tx-3); line-height:1.55; }

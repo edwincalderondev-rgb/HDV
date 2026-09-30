@@ -298,8 +298,9 @@ window.ARCHITECT_KB = {
         <li><b>Alcance end-to-end:</b> no ejecuta tareas dentro de un sistema ajeno — define arquitectura, elige el
           stack, modela la base de datos, administra los servidores Linux, despliega, asegura y opera. Hoy es
           literalmente el área de TI completa de una empresa.</li>
-        <li><b>Propiedad intelectual y certificaciones:</b> software propio registrado ante la Dirección Nacional de
-          Derecho de Autor y 5 órdenes de servicios profesionales certificadas por la Universidad del Magdalena.</li>
+        <li><b>Propiedad intelectual y certificaciones:</b> la plataforma del proyecto BPIN está registrada ante la
+          Dirección Nacional de Derecho de Autor, y acredita 5 órdenes de servicios profesionales certificadas
+          por la Universidad del Magdalena.</li>
       </ul>
       <p>A esto se suma algo poco común: <b>dos ingenierías</b>. La industrial le da lectura de negocio y procesos;
       la de sistemas, capacidad de construcción. Rara vez coinciden en la misma persona.</p>`
@@ -516,7 +517,7 @@ window.ARCHITECT_KB = {
     tags: ['nucleo','inventario','erp','pos','punto de venta','electron','sqlite','fifo','producto','escritorio','app','facturacion','termica','escpos','cartera','software propio','producto propio'],
     q: ['que es nucleo','cuentame del erp','que software ha construido','que aplicaciones ha hecho','proyecto de inventario','cual es su producto propio'],
     a: `<p><b>Núcleo</b> — ERP y Punto de Venta de escritorio. Producto propio, <b>en producción con clientes
-      reales</b> y <b>registrado ante la DNDA</b>.</p>
+      reales</b>.</p>
       <p>Gestiona un negocio de venta al por mayor y detal completo: inventario multi-presentación, ventas con lector
       de código de barras, cartera de clientes, reportes financieros y facturación térmica.</p>
       <p><b>Decisiones de ingeniería destacables:</b></p>
@@ -574,6 +575,8 @@ window.ARCHITECT_KB = {
         <li>Stack <b>Angular + PHP/Laravel + MySQL</b> sobre infraestructura Linux administrada por él.</li>
         <li>Generación automatizada de reportes e instrumentos de levantamiento en campo y laboratorio.</li>
         <li>Coordinación de un <b>equipo de 3 desarrolladores</b>: arquitectura, estándares y entregables.</li>
+        <li>La plataforma está <b>registrada ante la Dirección Nacional de Derecho de Autor</b> —
+          Libro–Tomo–Partida 13-93-10.</li>
       </ul>
       <p>Es un antecedente relevante para entornos corporativos o públicos: sabe trabajar con trazabilidad,
       soportes contractuales y auditoría de ejecución.</p>`
@@ -720,8 +723,8 @@ window.ARCHITECT_KB = {
         <li><b>Diagnostica antes de construir.</b> Su formación industrial hace que no construya software innecesario.
           Detecta el problema real —como el error contable en cartera o las fallas de la plataforma de Petroil— y
           resuelve la causa.</li>
-        <li><b>Entrega cosas que funcionan.</b> Núcleo está en producción con clientes reales y registrado
-          ante la DNDA. La plataforma BPIN se ejecutó con recursos públicos y está certificada. No son demos.</li>
+        <li><b>Entrega cosas que funcionan.</b> Núcleo está en producción con clientes reales. La plataforma BPIN se
+          ejecutó con recursos públicos, está certificada y registrada ante la DNDA. No son demos.</li>
         <li><b>Lidera.</b> Equipos técnicos de desarrollo y equipos operativos de hasta 50 personas, con
           reconocimiento nacional por la ejecución.</li>
         <li><b>Trae capacidades adicionales sin costo extra:</b> dirección creativa, producción audiovisual, IA
@@ -780,8 +783,8 @@ window.ARCHITECT_KB = {
         <li><b>Ingeniería Industrial</b> — Universidad del Magdalena · <b>2023 – 2026</b>.</li>
       </ul>
       <p><b>Idiomas:</b> español nativo · inglés B2 (intermedio).</p>
-      <p><b>Registro legal:</b> software de autoría propia registrado ante la <b>Dirección Nacional de Derecho de Autor</b>
-      del Ministerio del Interior de Colombia — Libro–Tomo–Partida <b>13-93-10</b>.</p>
+      <p><b>Registro legal:</b> la plataforma del proyecto BPIN está registrada ante la <b>Dirección Nacional de
+      Derecho de Autor</b> del Ministerio del Interior de Colombia — Libro–Tomo–Partida <b>13-93-10</b>.</p>
       <p>La Universidad del Magdalena es además donde acumula la mayor parte de su experiencia certificada: 5 órdenes
       de servicios profesionales entre 2021 y 2024.</p>`
   },
@@ -795,7 +798,7 @@ window.ARCHITECT_KB = {
           —Grupo de Contratación, 07 de mayo de 2024— que acredita cinco vinculaciones:
           OPSP-VIN-0157-2024, OPSP-VIN-0158-2023, OPSP-VAD-1171-2022, OPSP-VEX-1182-2022 y OPSP-VAD-1429-2021.</li>
         <li><b>Registro de software ante la DNDA</b> (Dirección Nacional de Derecho de Autor, Ministerio del Interior) —
-          Libro–Tomo–Partida 13-93-10.</li>
+          Libro–Tomo–Partida 13-93-10, correspondiente a la <b>plataforma del proyecto BPIN</b>.</li>
         <li><b>Proyecto BPIN 2020000100758</b>, ejecutado con recursos públicos de regalías y verificable en los
           sistemas de información del proyecto.</li>
         <li><b>VR Zone</b>: empresa activa con presencia pública verificable y 4.8/5 de calificación.</li>
